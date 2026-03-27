@@ -11,7 +11,7 @@
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.378.0/dist/umd/lucide.min.js"></script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -48,15 +48,25 @@
   }
 
   /* NAV */
-  nav {
-    max-width: 880px;
-    margin: 0 auto;
-    padding: 32px 24px 40px;
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bg);
+    max-width: 100%;
+    padding: 20px 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--border);
-    margin-bottom: 0;
+  }
+  nav .nav-inner {
+    max-width: 880px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .nav-logo { font-family: var(--serif); font-size: 20px; color: var(--ink); letter-spacing: -0.3px; }
   .nav-links { display: flex; gap: 28px; }
@@ -281,6 +291,7 @@
 <body>
 
 <nav>
+  <div class="nav-inner">
   <span class="nav-logo">JJR</span>
   <div class="nav-links">
     <a href="#about">About</a>
@@ -289,6 +300,7 @@
     <a href="#publications">Publications</a>
     <a href="#recognition">Recognition</a>
     <a href="#contact">Contact</a>
+ </div>
   </div>
 </nav>
 
