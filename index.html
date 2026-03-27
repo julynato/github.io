@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dr. Julia Jiménez-Romero</title>
+<meta name="description" content="Senior Energy Consultant specialising in data-driven decarbonisation, process integration, and digital energy tools for energy-intensive industry." />
+<meta name="author" content="Dr. Julia Jiménez-Romero" />
+<meta property="og:title" content="Dr. Julia Jiménez-Romero | Energy Consultant" />
+<meta property="og:description" content="Data-driven decarbonisation for energy-intensive industry." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #F5F2EC;
+    --bg-alt: #F0EDE5;
+    --ink: #111;
+    --muted: #666;
+    --accent: #E8A020;
+    --accent2: #1A0A2E;
+    --purple: #6B4FA0;
+    --steel: #8A9BB0;
+    --border: rgba(0,0,0,0.09);
+    --card: #ffffff;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', sans-serif;
+  }
+
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .page-inner {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* NAV */
+  nav {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 24px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 0;
+  }
+  .nav-logo { font-family: var(--serif); font-size: 20px; color: var(--ink); letter-spacing: -0.3px; }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-links a {
+    font-size: 12px; color: var(--muted); text-decoration: none;
+    letter-spacing: 0.05em; text-transform: uppercase; font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+
+  /* HERO — no tint, base bg */
+  .hero-wrap { background: var(--bg); padding: 80px 0 100px; }
+  .hero { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+  .hero-side {
+    display: flex;
+    align-items: center;
+    gap: 52px;
+    flex-wrap: wrap;
+  }
+  .hero-photo {
+    width: 160px; height: 160px; border-radius: 50%;
+    object-fit: cover; object-position: center top;
+    border: 3px solid rgba(232,160,32,0.35); flex-shrink: 0;
+  }
+  .hero-content { flex: 1; min-width: 280px; }
+  .hero-badges { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+  .hero-tag {
+    display: inline-block; font-size: 11px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--accent); border: 1px solid var(--accent);
+    padding: 4px 14px; border-radius: 2px; width: fit-content;
+  }
+  .hero-nationality { font-size: 12px; color: var(--steel); font-weight: 400; letter-spacing: 0.04em; }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(44px, 7vw, 72px);
+    line-height: 1.05; letter-spacing: -1.5px; margin-bottom: 20px;
+  }
+  .hero h1 .firstname { color: var(--ink); }
+  .hero h1 .lastname { color: var(--accent); }
+  .hero-sub { font-size: 19px; color: var(--muted); max-width: 540px; line-height: 1.65; margin-bottom: 36px; font-weight: 300; }
+  .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--accent2); color: var(--bg);
+    text-decoration: none; font-size: 14px; font-weight: 500;
+    padding: 13px 28px; border-radius: 2px; letter-spacing: 0.02em; transition: background 0.2s;
+  }
+  .btn-primary:hover { background: var(--accent); color: var(--accent2); }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--ink); text-decoration: none;
+    font-size: 14px; font-weight: 500; padding: 13px 28px;
+    border: 1px solid var(--border); border-radius: 2px; transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* SECTION WRAPPER — alternating backgrounds */
+  .section-wrap { padding: 80px 0; }
+  .section-wrap.alt { background: var(--bg-alt); }
+  .section-wrap.base { background: var(--bg); }
+
+  /* SECTION HEADER */
+  .section-header {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 48px;
+  }
+  .section-header-line { flex: 1; height: 1px; background: var(--border); }
+  .section-title-group { display: flex; align-items: center; gap: 8px; }
+  .section-icon { width: 16px; height: 16px; color: var(--accent); flex-shrink: 0; }
+  .section-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: -0.3px;
+  }
+
+  /* ABOUT */
+  .about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: start; }
+  .about-text h2 { font-family: var(--serif); font-size: 26px; line-height: 1.2; margin-bottom: 22px; letter-spacing: -0.3px; color: var(--ink); }
+  .about-text p { color: var(--muted); font-weight: 300; margin-bottom: 14px; font-size: 15px; line-height: 1.8; }
+  .about-text p:last-child { margin-bottom: 0; }
+  .about-stats { display: flex; flex-direction: column; }
+  .stat-item { border-top: 1px solid var(--border); padding: 20px 0; }
+  .stat-item:last-child { border-bottom: 1px solid var(--border); }
+  .stat-number { font-family: var(--serif); font-size: 38px; line-height: 1; color: var(--accent); margin-bottom: 5px; }
+  .stat-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 500; line-height: 1.4; }
+
+  /* EXPERTISE */
+  .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
+  .expertise-card { background: var(--card); padding: 30px 24px; transition: background 0.25s; cursor: default; }
+  .expertise-card:hover { background: var(--accent2); }
+  .expertise-card:hover .exp-title { color: white; }
+  .expertise-card:hover .exp-body { color: rgba(255,255,255,0.65); }
+  .expertise-card:hover .exp-num { color: rgba(255,255,255,0.2); }
+  .expertise-card:hover .exp-icon { color: var(--accent); }
+  .exp-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px; }
+  .exp-num { font-size: 11px; color: var(--purple); font-weight: 500; letter-spacing: 0.1em; transition: color 0.25s; }
+  .exp-icon { width: 16px; height: 16px; color: var(--purple); transition: color 0.25s; flex-shrink: 0; }
+  .exp-title { font-weight: 500; font-size: 14px; margin-bottom: 10px; color: var(--ink); transition: color 0.25s; line-height: 1.4; }
+  .exp-body { font-size: 13px; color: var(--muted); line-height: 1.65; font-weight: 300; transition: color 0.25s; }
+
+  /* PROJECTS */
+  .project-list { display: flex; flex-direction: column; }
+  .project-item {
+    display: grid; grid-template-columns: 96px 1fr auto;
+    gap: 28px; align-items: start; padding: 32px 0;
+    border-bottom: 1px solid var(--border); text-decoration: none; color: inherit; transition: opacity 0.2s;
+  }
+  .project-item:first-child { border-top: 1px solid var(--border); }
+  .project-item:hover { opacity: 0.6; }
+  .proj-year { font-size: 12px; color: var(--steel); padding-top: 3px; line-height: 1.5; }
+  .proj-name { font-weight: 500; font-size: 16px; margin-bottom: 7px; }
+  .proj-desc { font-size: 13px; color: var(--muted); font-weight: 300; line-height: 1.7; }
+  .proj-tag { font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent); font-weight: 500; white-space: nowrap; padding-top: 4px; }
+
+  /* PUBLICATIONS */
+  .pub-list { display: flex; flex-direction: column; }
+  .pub-group-label {
+    font-size: 11px; font-weight: 500; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--purple); padding: 24px 0 12px;
+    border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 7px;
+  }
+  .pub-group-label:first-child { padding-top: 0; }
+  .pub-group-label i { width: 13px; height: 13px; }
+  .pub-item { padding: 22px 0; border-bottom: 1px solid var(--border); }
+  .pub-meta { font-size: 12px; color: var(--steel); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
+  .pub-title { font-size: 15px; font-weight: 500; margin-bottom: 6px; line-height: 1.45; }
+  .pub-journal { font-size: 13px; color: var(--muted); font-weight: 300; font-style: italic; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .pub-doi { font-size: 12px; font-style: normal; color: var(--accent2); text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 4px; transition: color 0.2s; }
+  .pub-doi:hover { color: var(--accent); }
+  .pub-doi i { width: 12px; height: 12px; }
+  .pub-link { color: var(--accent2); text-decoration: none; font-style: normal; display: inline-flex; align-items: center; gap: 4px; font-size: 13px; transition: color 0.2s; }
+  .pub-link:hover { color: var(--accent); }
+  .pub-note { font-size: 14px; color: var(--muted); font-weight: 300; line-height: 1.8; padding: 22px 0; border-bottom: 1px solid var(--border); }
+
+  /* RECOGNITION */
+  .recognition-list { display: flex; flex-direction: column; }
+  .recognition-item {
+    display: grid; grid-template-columns: 1fr auto; gap: 24px;
+    align-items: start; padding: 24px 0; border-bottom: 1px solid var(--border);
+  }
+  .recognition-item:first-child { border-top: 1px solid var(--border); }
+  .rec-header { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 5px; }
+  .rec-icon { width: 15px; height: 15px; color: var(--accent); flex-shrink: 0; margin-top: 3px; }
+  .rec-title { font-weight: 500; font-size: 15px; }
+  .rec-body { font-size: 13px; color: var(--muted); font-weight: 300; line-height: 1.6; padding-left: 25px; }
+  .rec-year { font-size: 12px; color: var(--steel); white-space: nowrap; padding-top: 3px; }
+
+  /* SKILLS */
+  .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
+  .skills-card { background: var(--card); padding: 26px 24px; }
+  .skills-cat-header { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
+  .skills-cat-icon { width: 15px; height: 15px; color: var(--accent); }
+  .skills-cat { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); }
+  .skills-list { display: flex; flex-direction: column; gap: 8px; }
+  .skill-item { display: flex; align-items: flex-start; gap: 8px; }
+  .skill-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(0,0,0,0.15); margin-top: 9px; flex-shrink: 0; }
+  .skill-tag { font-size: 13px; color: var(--muted); font-weight: 300; line-height: 1.5; }
+
+  /* WRITING */
+  .writing-inner { border-left: 3px solid var(--accent); padding-left: 28px; }
+  .writing-inner p { font-size: 19px; font-weight: 300; color: var(--muted); line-height: 1.7; margin-bottom: 12px; max-width: 540px; }
+  .coming-soon-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--steel); font-weight: 500;
+  }
+
+  /* CONTACT */
+  .contact-inner {
+    background: var(--accent2); color: var(--bg);
+    padding: 60px 52px; border-radius: 4px;
+    display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px;
+  }
+  .contact-left { max-width: 340px; }
+  .contact-headline { font-family: var(--serif); font-size: 36px; letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 14px; }
+  .contact-headline em { font-style: italic; color: var(--accent); }
+  .contact-availability {
+    font-size: 13px; color: rgba(245,242,236,0.55); font-weight: 300;
+    display: flex; align-items: center; gap: 7px; margin-bottom: 6px;
+  }
+  .contact-availability i { width: 13px; height: 13px; color: var(--accent); }
+  .contact-available-line {
+    font-size: 13px; color: rgba(245,242,236,0.55); font-weight: 300;
+    display: flex; align-items: center; gap: 7px;
+  }
+  .contact-available-line i { width: 13px; height: 13px; color: var(--accent); }
+  .contact-links { display: flex; flex-direction: column; gap: 22px; padding-top: 4px; }
+  .contact-link { display: flex; align-items: flex-start; gap: 12px; text-decoration: none; transition: opacity 0.2s; }
+  .contact-link:hover { opacity: 0.75; }
+  .contact-link-icon { width: 16px; height: 16px; color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+  .contact-link-text { display: flex; flex-direction: column; }
+  .contact-link-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 500; margin-bottom: 2px; }
+  .contact-link-val { font-size: 14px; color: rgba(245,242,236,0.8); font-weight: 300; }
+
+  /* FOOTER */
+  footer {
+    max-width: 880px; margin: 0 auto; padding: 40px 24px 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 12px; color: var(--steel); flex-wrap: wrap; gap: 8px;
+    border-top: 1px solid var(--border);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 680px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .expertise-grid { grid-template-columns: 1fr; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .project-item { grid-template-columns: 64px 1fr; }
+    .proj-tag { display: none; }
+    .recognition-item { grid-template-columns: 1fr; }
+    .rec-year { display: none; }
+    .contact-inner { padding: 40px 28px; flex-direction: column; }
+    .hero-side { flex-direction: column; align-items: flex-start; }
+    .nav-links { gap: 14px; }
+    .nav-links a { font-size: 11px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">JJR</span>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#projects">Projects</a>
+    <a href="#publications">Publications</a>
+    <a href="#recognition">Recognition</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero-wrap">
+  <div class="hero">
+    <span class="hero-tag">CEng Candidate · IChemE</span>
+    <span class="hero-nationality" style="display:block; margin-top:8px; font-size:12px; color:var(--steel); letter-spacing:0.04em;">Ecuadorian-British · Greater Manchester, UK</span>
+    <h1 style="margin-top:24px;"><span class="firstname">Dr. Julia<br></span><span class="lastname">Jiménez-Romero</span></h1>
+    <p class="hero-sub">Data-driven decarbonisation for energy-intensive industry.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn-primary">
+        <i data-lucide="mail" style="width:15px;height:15px;"></i>
+        Get in touch
+      </a>
+      <a href="#projects" class="btn-outline">
+        <i data-lucide="folder-open" style="width:15px;height:15px;"></i>
+        View work
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT — alt bg -->
+<div class="section-wrap alt" id="about">
+  <div class="page-inner">
+    <div class="section-header">
+      <div class="section-header-line"></div>
+      <div class="section-title-group">
+        <i data-lucide="user" class="section-icon"></i>
+        <span class="section-title">About</span>
+      </div>
+      <div class="section-header-line"></div>
+    </div>
+    <div class="about-photo-row" style="display:flex; gap:48px; align-items:flex-start; flex-wrap:wrap; margin-bottom:48px;">
+      <img src="photo.jpg" alt="Dr. Julia Jiménez-Romero"
+        style="width:160px; height:160px; border-radius:50%; object-fit:cover; object-position:center top;
+        border:3px solid rgba(232,160,32,0.35); flex-shrink:0;" />
+      <div style="flex:1; min-width:240px;">
+        <p style="font-size:15px; color:var(--muted); font-weight:300; line-height:1.8; margin-bottom:10px;">
+          Senior Energy Consultant with a PhD in Chemical Engineering and 5+ years of post-PhD experience at the intersection of process integration, digital energy tools and industrial decarbonisation.
+        </p>
+        <p style="font-size:13px; color:var(--steel); font-weight:400; letter-spacing:0.02em;">
+          Formerly Research Director and Board Member at APIL. Currently independent consultant.
+          Elected Director, AIChE Fuels &amp; Petrochemical Division. Visiting Researcher, University of Manchester.
+        </p>
+      </div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <h2>Grounding decarbonisation decisions in engineering reality.</h2>
+        <p>My work focuses on high-level energy systems analysis: whole-systems modelling, heat integration, utility system optimisation and techno-economic assessment. I provide the conceptual foundations and strategic roadmaps that guide informed decisions in energy-intensive industries.</p>
+        <p>Client-facing lead for international industry partnerships across Europe, South America, India and North America, including collaborations with INERCO and other multinational project teams.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-item">
+          <div class="stat-number">5+</div>
+          <div class="stat-label">Years of post-PhD experience in industrial energy systems</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">PhD</div>
+          <div class="stat-label">Chemical Engineering, University of Manchester</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">CEng</div>
+          <div class="stat-label">Candidate, IChemE, UK-SPEC</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EXPERTISE — base bg -->
+<div class="section-wrap base" id="expertise">
+  <div class="page-inner">
+    <div class="section-header">
+      <div class="section-header-line"></div>
+      <div class="section-title-group">
+        <i data-lucide="zap" class="section-icon"></i>
+        <span class="section-title">Expertise</span>
+      </div>
+      <div class="section-header-line"></div>
+    </div>
+    <div class="expertise-grid">
+      <div class="expertise-card">
+        <div class="exp-header"><span class="exp-num">01</span><i data-lucide="flame" class="exp-icon"></i></div>
+        <div class="exp-title">Energy Systems Analysis and Pinch Analysis</div>
+        <div class="exp-body">Thermodynamic assessment of industrial processes: energy targeting, pinch analysis, and heat and material balance development to identify efficiency gaps and recovery potential.</div>
+      </div>
+      <div class="expertise-card">
+        <div class="exp-header"><span class="exp-num">02</span><i data-lucide="settings-2" class="exp-icon"></i></div>
+        <div class="exp-title">Utility System Optimisation</div>
+        <div class="exp-body">Conceptual design and optimisation of process utility systems, evaluating steam, power and fuel configurations including technology selection and multiperiod operational strategy.</div>
+      </div>
+      <div class="expertise-card">
+        <div class="exp-header"><span class="exp-num">03</span><i data-lucide="leaf" class="exp-icon"></i></div>
+        <div class="exp-title">Industrial Energy Transition Strategy</div>
+        <div class="exp-body">Optimisation-based frameworks for industrial energy transition, balancing economic and environmental performance to define cost-effective low-carbon pathways from current to future system designs.</div>
+      </div>
+      <div class="expertise-card">
+        <div class="exp-header"><span class="exp-num">04</span><i data-lucide="cpu" class="exp-icon"></i></div>
+        <div class="exp-title">Digital Energy Tools and Digital Twins</div>
+        <div class="exp-body">Scoping and technical leadership of industrial digital twin development, integrating process simulation, data-driven models and cloud architecture for continuous energy performance monitoring.</div>
+      </div>
+      <div class="expertise-card">
+        <div class="exp-header"><span class="exp-num">05</span><i data-lucide="bar-chart-2" class="exp-icon"></i></div>
+        <div class="exp-title">Techno-Economic Assessment</div>
+        <div class="exp-body">Conceptual economic evaluation of industrial energy projects, providing the analytical foundation for investment prioritisation and decarbonisation planning.</div>
+      </div>
+      <div class="expertise-card">
+        <div class="exp-header"><span class="exp-num">06</span><i data-lucide="users" class="exp-icon"></i></div>
+        <div class="exp-title">Technical Advisory and Project Leadership</div>
+        <div class="exp-body">End-to-end management of energy consultancy engagements, from scoping and proposal development through to client delivery across multilingual, multinational project teams.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECTS — alt bg -->
+<div class="section-wrap alt" id="projects">
+  <div class="page-inner">
+    <div class="section-header">
+      <div class="section-header-line"></div>
+      <div class="section-title-group">
+        <i data-lucide="folder" class="section-icon"></i>
+        <span class="section-title">Selected Projects</span>
+      </div>
+      <div class="section-header-line"></div>
+    </div>
+    <div class="project-list">
+      <a href="#" class="project-item">
+        <span class="proj-year">2023–Active</span>
+        <div>
+          <div class="proj-name">European Crude Oil Refinery — Digital Energy Twin</div>
+          <div class="proj-desc">Energy baseline assessment, pinch analysis and HEN optimisation for a crude distillation unit. Technical lead on development of a SaaS-based digital twin integrating process simulation, ANN models and Azure cloud connectivity for continuous energy performance monitoring.</div>
+        </div>
+        <span class="proj-tag">Active · Refining</span>
+      </a>
+      <a href="#" class="project-item">
+        <span class="proj-year">2021–2022</span>
+        <div>
+          <div class="proj-name">Shell — Utility System Optimisation</div>
+          <div class="proj-desc">Multi-objective optimisation of a complex multi-site utility system in collaboration with Shell and the University of Manchester. Analysis of decarbonisation pathways including electrification, renewables integration, CCS and biomass across multiple geographic and regulatory scenarios.</div>
+        </div>
+        <span class="proj-tag">Completed · Industry Collaboration</span>
+      </a>
+      <a href="#" class="project-item">
+        <span class="proj-year">2022</span>
+        <div>
+          <div class="proj-name">Shell — LNG Decarbonisation</div>
+          <div class="proj-desc">Decarbonisation strategy analysis for LNG operations in collaboration with Shell and the University of Manchester. Application of optimisation-based frameworks to evaluate low-carbon technology alternatives and transition pathways.</div>
+        </div>
+        <span class="proj-tag">Completed · Industry Collaboration</span>
+      </a>
+      <a href="#" class="project-item">
+        <span class="proj-year">2024–2025</span>
+        <div>
+          <div class="proj-name">Next Generation Energy Software Platform</div>
+          <div class="proj-desc">Technical lead for requirements definition and coordination of a next-generation utility system software platform. Proof of concept delivered: modern web interface deployed on Microsoft Azure, communicating with validated legacy calculation engines.</div>
+        </div>
+        <span class="proj-tag">PoC Delivered · Digital</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- PUBLICATIONS — base bg -->
+<div class="section-wrap base" id="publications">
+  <div class="page-inner">
+    <div class="section-header">
+      <div class="section-header-line"></div>
+      <div class="section-title-group">
+        <i data-lucide="book-open" class="section-icon"></i>
+        <span class="section-title">Publications</span>
+      </div>
+      <div class="section-header-line"></div>
+    </div>
+    <div class="pub-list">
+      <div class="pub-group-label"><i data-lucide="file-text"></i>Journal Papers</div>
+      <div class="pub-item">
+        <div class="pub-meta">2023 · Computers &amp; Chemical Engineering</div>
+        <div class="pub-title">BEELINE: Bilevel Decomposition Algorithm for Synthesis of Industrial Energy Systems</div>
+        <div class="pub-journal">
+          Jiménez-Romero J, Azapagic A, Smith R · Vol. 180, 108406
+          <a href="https://doi.org/10.1016/j.compchemeng.2023.108406" target="_blank" class="pub-doi"><i data-lucide="external-link"></i>DOI</a>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-meta">2022 · Computers &amp; Chemical Engineering</div>
+        <div class="pub-title">STYLE: A New Optimisation Model for Synthesis of Utility Systems with Steam Level Placement</div>
+        <div class="pub-journal">
+          Jiménez-Romero J, Azapagic A, Smith R · Vol. 170, 108060
+          <a href="https://doi.org/10.1016/j.compchemeng.2022.108060" target="_blank" class="pub-doi"><i data-lucide="external-link"></i>DOI</a>
+        </div>
+      </div>
+      <div class="pub-group-label"><i data-lucide="presentation"></i>Conference Papers</div>
+      <div class="pub-item">
+        <div class="pub-meta">2023 · ESCAPE-32</div>
+        <div class="pub-title">Systematic Development of Strategies for the Decarbonisation of Process Utility Systems</div>
+        <div class="pub-journal">
+          Jiménez-Romero J, Azapagic A, Smith R · Computer Aided Chemical Engineering, Vol. 52
+          <a href="https://doi.org/10.1016/B978-0-443-15274-0.50478-6" target="_blank" class="pub-doi"><i data-lucide="external-link"></i>DOI</a>
+        </div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-meta">2019 · ESCAPE-29</div>
+        <div class="pub-title">Novel Methodology for Cogeneration Targeting with Optimum Steam Level Placement</div>
+        <div class="pub-journal">
+          Jiménez-Romero J, Azapagic A, Smith R · Computer Aided Chemical Engineering, Vol. 46
+          <a href="https://doi.org/10.1016/B978-0-12-818634-3.50291-2" target="_blank" class="pub-doi"><i data-lucide="external-link"></i>DOI</a>
+        </div>
+      </div>
+      <div class="pub-group-label"><i data-lucide="graduation-cap"></i>Thesis</div>
+      <div class="pub-item">
+        <div class="pub-meta">2021 · PhD Thesis · University of Manchester</div>
+        <div class="pub-title">Reduction of Industrial Energy Demand through Sustainable Integration of Distributed Energy Hubs</div>
+        <div class="pub-journal">
+          <a href="https://research.manchester.ac.uk/en/studentTheses/reduction-of-industrial-energy-demand-through-sustainable-integra/" target="_blank" class="pub-link">Full text, University of Manchester Research Repository <i data-lucide="external-link" style="width:12px;height:12px;"></i></a>
+        </div>
+      </div>
+      <div class="pub-group-label"><i data-lucide="mic"></i>Conferences &amp; Invited Talks</div>
+      <div class="pub-note">Regular presenter at international conferences including the AIChE Spring Meeting, ESCAPE and PRES, with multiple presentations at each. Invited seminar speaker at the Energy Systems Initiative, Carnegie Mellon University (2023), and Escuela Politécnica del Litoral, Ecuador (2023). Invited researcher and workshop leader at Escuela Politécnica Nacional, Ecuador, including a residential research visit (2024).</div>
+    </div>
+  </div>
+</div>
+
+<!-- RECOGNITION — alt bg -->
+<div class="section-wrap alt" id="recognition">
+  <div class="page-inner">
+    <div class="section-header">
+      <div class="section-header-line"></div>
+      <div class="section-title-group">
+        <i data-lucide="award" class="section-icon"></i>
+        <span class="section-title">Recognition &amp; Awards</span>
+      </div>
+      <div class="section-header-line"></div>
+    </div>
+    <div class="recognition-list">
+      <div class="recognition-item">
+        <div>
+          <div class="rec-header"><i data-lucide="trophy" class="rec-icon"></i><div class="rec-title">Advanced Process Integration Design Prize</div></div>
+          <div class="rec-body">Best performance in the MSc Chemical Engineering programme, University of Manchester</div>
+        </div>
+        <span class="rec-year">2017</span>
+      </div>
+      <div class="recognition-item">
+        <div>
+          <div class="rec-header"><i data-lucide="trophy" class="rec-icon"></i><div class="rec-title">Research Council of Norway — HighEFF Centre</div></div>
+          <div class="rec-body">Full doctoral fellowship, competitive national research funding for industrial energy systems</div>
+        </div>
+        <span class="rec-year">2017–2022</span>
+      </div>
+      <div class="recognition-item">
+        <div>
+          <div class="rec-header"><i data-lucide="trophy" class="rec-icon"></i><div class="rec-title">SENESCYT Ecuador</div></div>
+          <div class="rec-body">National merit scholarship for postgraduate study abroad, University of Manchester MSc</div>
+        </div>
+        <span class="rec-year">2016–2017</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SKILLS — base bg -->
+<div class="section-wrap base" id="skills">
+  <div class="page-inner">
+    <div class="section-header">
+      <div class="section-header-line"></div>
+      <div class="section-title-group">
+        <i data-lucide="wrench" class="section-icon"></i>
+        <span class="section-title">Skills &amp; Tools</span>
+      </div>
+      <div class="section-header-line"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skills-card">
+        <div class="skills-cat-header"><i data-lucide="function-square" class="skills-cat-icon"></i><span class="skills-cat">Optimisation &amp; Modelling</span></div>
+        <div class="skills-list">
+          <div class="skill-item"><div class="skill-dot"></div><span class="skill-tag">GAMS, Advanced</span></div>
+          <div class="skill-item"><div class="skill-dot"></div><span class="skill-tag">Python, Intermediate</span></div>
+          <div class="skill-item"><div class="skill-dot"></div><span class="skill-tag">Mixed-Integer Optimisation (MINLP)</span></div>
+          <div class="skill-item"><div class="skill-dot"></div><span class="skill-tag">Multi-Objective Optimisation</span></div>
+        </div>
+      </div>
+      <div class="skills-card">
+        <div class="skills-cat-header"><i data-lucide="flask-conical" class="skills-cat-icon"></i><span class="skills-cat">Process &amp; Sustainability</span></div>
+        <div class="skills-list">
+          <div class="skill-item"><div class="skill-dot"></div><span class="skill-tag">UniSim, Process Simulation</span></div>
+          <div class="skill-item"><div class="skill-dot"></div><span class="skill-tag">GaBi, Life Cycle Assessment</span></div>
+          <div class="skill-item"><div class="skill-dot"></div><span class="skill-tag">Energy and Carbon Footprint Modelling</span></div>
+          <div class="skill-item"><div class="skill-dot"></div><span class="skill-tag">Pinch Analysis and Heat Integration</span></div>
+        </div>
+      </div>
+      <div class="skills-card">
+        <div class="skills-cat-header"><i data-lucide="cloud" class="skills-cat-icon"></i><span class="skills-cat">Digital &amp; Data</span></div>
+        <div class="skills-list">
+          <div class="skill-item"><div class="skill-dot"></div><span class="skill-tag">Azure, Cloud Architecture</span></div>
+          <div class="skill-item"><div class="skill-dot"></div><span class="skill-tag">Power BI, Reporting and Dashboards</span></div>
+          <div class="skill-item"><div class="skill-dot"></div><span class="skill-tag">Python, Pandas and Matplotlib</span></div>
+          <div class="skill-item"><div class="skill-dot"></div><span class="skill-tag">PFD and P&amp;ID Interpretation</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WRITING — alt bg -->
+<div class="section-wrap alt" id="writing">
+  <div class="page-inner">
+    <div class="section-header">
+      <div class="section-header-line"></div>
+      <div class="section-title-group">
+        <i data-lucide="pen-line" class="section-icon"></i>
+        <span class="section-title">Writing</span>
+      </div>
+      <div class="section-header-line"></div>
+    </div>
+    <div class="writing-inner">
+      <p>Thoughts on industrial decarbonisation, energy systems optimisation, AI in industry, life in general.</p>
+      <div class="coming-soon-badge">
+        <i data-lucide="clock" style="width:13px;height:13px;color:var(--steel);"></i>
+        Coming soon
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT — base bg -->
+<div class="section-wrap base" id="contact">
+  <div class="page-inner">
+    <div class="section-header">
+      <div class="section-header-line"></div>
+      <div class="section-title-group">
+        <i data-lucide="send" class="section-icon"></i>
+        <span class="section-title">Contact</span>
+      </div>
+      <div class="section-header-line"></div>
+    </div>
+    <div class="contact-inner">
+      <div class="contact-left">
+        <div class="contact-headline">Let's work on something <em>worth solving.</em></div>
+        <div class="contact-available-line">
+          <i data-lucide="circle-dot"></i>
+          Available for new engagements
+        </div>
+      </div>
+      <div class="contact-links" style="flex-direction:row; align-items:center; gap:16px;">
+        <a href="#" id="email-link" aria-label="Send an email" title="Email"
+           style="display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:50%; border:1.5px solid rgba(232,160,32,0.4); color:var(--accent); transition:background 0.2s, border-color 0.2s;"
+           onmouseover="this.style.background='rgba(232,160,32,0.15)'; this.style.borderColor='var(--accent)';"
+           onmouseout="this.style.background=''; this.style.borderColor='rgba(232,160,32,0.4)';">
+          <i data-lucide="mail" style="width:20px;height:20px;"></i>
+        </a>
+        <a href="#" id="linkedin-link" aria-label="Connect on LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer"
+           style="display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:50%; border:1.5px solid rgba(232,160,32,0.4); color:var(--accent); transition:background 0.2s, border-color 0.2s;"
+           onmouseover="this.style.background='rgba(232,160,32,0.15)'; this.style.borderColor='var(--accent)';"
+           onmouseout="this.style.background=''; this.style.borderColor='rgba(232,160,32,0.4)';">
+          <i data-lucide="linkedin" style="width:20px;height:20px;"></i>
+        </a>
+        <div style="display:inline-flex; align-items:center; gap:7px; font-size:13px; color:rgba(245,242,236,0.5); font-weight:300;">
+          <i data-lucide="map-pin" style="width:14px;height:14px;color:var(--accent);"></i>
+          Greater Manchester, UK
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span>Dr. Julia Jiménez-Romero</span>
+  <span>Senior Energy Consultant · Greater Manchester, UK</span>
+</footer>
+
+<script>
+  lucide.createIcons();
+
+  /* Email obfuscation — icon only, no visible text */
+  (function() {
+    var u = 'nataly.jimenezr';
+    var d = 'hotmail.com';
+    var link = document.getElementById('email-link');
+    if (link) link.setAttribute('href', 'mailto:' + u + '@' + d);
+  })();
+
+  /* LinkedIn obfuscation */
+  (function() {
+    var base = 'https://www.linkedin.com/in/';
+    var slug = 'julia-jimenez-romero';
+    var link = document.getElementById('linkedin-link');
+    if (link) link.setAttribute('href', base + slug + '/');
+  })();
+</script>
+
+</body>
+</html>
